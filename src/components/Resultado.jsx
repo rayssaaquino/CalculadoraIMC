@@ -41,7 +41,7 @@ const TabelaImc =(resultado)=>{
 
 }
 
-//destruct-(desestruturação)-acessa propriedades de outro componente
+//Destruct-(desestruturação)-acessa propriedades de outro componente
 function Resultado({resultado}){
     return(
         <div>
