@@ -1,9 +1,21 @@
-:root{
-    --fontcolor1: #fff;
-    --fontcolor2: #000;
-    --fontcolor3: #030436;
-    -bgcolor1: #2df0f0;
-    -bgcolor: #F1e9e9;
+.box{
+    display:flex;
+    flex-direction:column;
+    background:var(--bgColor2);
+    width:400px;
+    height:350px;
+    border-radius:30px;
+    padding:40px;
+}
+form{
+    display:flex;
+    flex-direction:column;
+}:root{
+    --fontColor1:#fff;
+    --fontColor2:#000;
+    --fontColor3:#030436;
+    --bgColor1:pink;
+    --bgColor2:#F1E9E9;
 }
 
 *{
@@ -11,11 +23,9 @@
     padding:0;
     box-sizing:border-box;
 }
-
-body{ 
-    background: var(--bgcolor1);
+body{
+    background:var(--bgColor1);
 }
-
 .container{
     height:100vh;
     display:flex;
