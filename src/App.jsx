@@ -1,8 +1,26 @@
+import {useState,useEffect} from "react"
 import Header from "./components/Header"
+import "./css/global.css"
+import "./css/estilo.css"
 
 function App() {
  
+  //Hook-useState - manipula o estado da variavel 
 
+  const [peso,setPeso]=useState(0);
+  const [altura,setAltura]=useState(0);
+  const [resultado,setResultado]=useState(0);
+  const [mostrarresultado, setMostrarResultado]=useState(false)
+
+  //Função calcular imc 
+
+  const calcularImc=()=>{
+  const imc = peso / (altura*altura)
+  return setResultado(imc.toFixed(2))
+  }
+  useEffect(()=>{
+    resultado > 0 ? setMostrarResultado(true) : setMostrarResultado(false)
+  },[resultado])
   return (
     // fragment
     <div className="container">
@@ -24,7 +42,7 @@ function App() {
       <button onClick={calcularImc}>Calcular</button>
      </form>
     </div>
-    {mostrarResultado && (
+    {mostrarresultado && (
       <Resultado resultado={resultado}></Resultado>
     )}
 
